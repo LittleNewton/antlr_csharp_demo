@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Numerics;
 
 namespace antlr_csharp
 {
@@ -26,7 +27,8 @@ namespace antlr_csharp
             }
             else
             {
-                throw new InvalidOperationException("Invalid operator");
+                Console.WriteLine("非法操作符");
+                return -1;
             }
         }
 
@@ -48,7 +50,8 @@ namespace antlr_csharp
                 }
                 else
                 {
-                    throw new InvalidOperationException("除数不能为 0");
+                    Console.WriteLine($"除数不能为零");
+                    return -1;
                 }
             }
             else if (op == "+")
